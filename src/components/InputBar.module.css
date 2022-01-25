@@ -10,8 +10,10 @@
 }
 .inputMoney > input {
   width: 100%;
+  text-align: center;
 }
 
 .selectMoney {
   width: 47%;
+  text-align: center;
 }

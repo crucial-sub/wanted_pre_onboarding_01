@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./InputBar.module.css";
 
-function InputBar() {
+function InputBar({ getValueHandler, userValue, dropDownHandler, onSubmit }) {
   return (
     <div className={styles.inputBox}>
-      <form className={styles.inputMoney}>
-        <input type="number" />
+      <form className={styles.inputMoney} onSubmit={onSubmit}>
+        <input type="number" onChange={getValueHandler} value={userValue} />
       </form>
-      <select className={styles.selectMoney}>
+      <select className={styles.selectMoney} onChange={dropDownHandler}>
         <option>USD</option>
         <option>CAD</option>
         <option>KRW</option>

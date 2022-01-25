@@ -1,11 +1,11 @@
 import React from "react";
-import Calc from "../components/Calc";
+import SecondCalc from "../components/SecondCalc";
 import styles from "./Main.module.css";
 
 function Main() {
   return (
-    <div>
-      <Calc />
+    <div className={styles.container}>
+      <SecondCalc />
     </div>
   );
 }

@@ -1,3 +1,31 @@
 .tabBox {
   height: 50%;
 }
+
+.tabMenu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.tabMenu > button {
+  border: 1px solid black;
+  padding: 5px;
+  flex: 1 1 20%;
+  text-align: center;
+}
+
+.tabMenu > button.active {
+  border-bottom: none;
+}
+
+.contentBox {
+  border: 1px black solid;
+  border-top: none;
+  padding: 10%;
+}
+
+.contentBox > h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
