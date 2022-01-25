@@ -5,25 +5,21 @@ import Tab from "./Tab";
 
 function SecondCalc() {
   const [userValue, setUserValue] = useState("");
-  const [inputUserValue, setInputUserValue] = useState("");
   const [dropDownValue, setDropDownValue] = useState("USD");
   const [exchangeRate, setExchangeRate] = useState({});
   const tabArr = ["USD", "CAD", "KRW", "HKD", "JPY", "CNY"];
   const [tabMenu, setTabMenu] = useState(tabArr.slice(1));
   const [currentTab, setCurrentTab] = useState("CAD");
   const getValueHandler = (event) => {
-    const newValue = event.target.value;
+    let newValue = event.target.value;
 
-    if (newValue <= 1000) {
+    if (newValue < 1000) {
       setUserValue(newValue);
     } else {
-      return setUserValue(1000);
+      newValue = 1000;
+      newValue = newValue.toLocaleString();
+      setUserValue(newValue);
     }
-  };
-
-  const onSubmit = (event) => {
-    event.preventDefault();
-    setInputUserValue(userValue);
   };
 
   const dropDownHandler = (event) => {
@@ -59,10 +55,9 @@ function SecondCalc() {
           getValueHandler={getValueHandler}
           userValue={userValue}
           dropDownHandler={dropDownHandler}
-          onSubmit={onSubmit}
         />
         <Tab
-          inputUserValue={inputUserValue}
+          userValue={isNaN(userValue) ? 1000 : userValue}
           tabMenu={tabMenu}
           exchangeRate={exchangeRate}
           dropDownValue={dropDownValue}

@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./InputBar.module.css";
 
-function InputBar({ getValueHandler, userValue, dropDownHandler, onSubmit }) {
+function InputBar({ getValueHandler, userValue, dropDownHandler }) {
   return (
     <div className={styles.inputBox}>
-      <form className={styles.inputMoney} onSubmit={onSubmit}>
-        <input type="number" onChange={getValueHandler} value={userValue} />
-      </form>
+      <input
+        className={styles.inputMoney}
+        onChange={getValueHandler}
+        value={userValue}
+      />
       <select className={styles.selectMoney} onChange={dropDownHandler}>
         <option>USD</option>
         <option>CAD</option>

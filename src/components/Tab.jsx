@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Tab.module.css";
 function Tab({
-  inputUserValue,
+  userValue,
   tabMenu,
   exchangeRate,
   dropDownValue,
@@ -28,9 +28,9 @@ function Tab({
       </div>
       <div className={styles.contentBox}>
         <h2>
-          {currentTab}{" "}
+          {currentTab}
           {(
-            inputUserValue *
+            userValue *
             (exchangeRate["USD" + currentTab] /
               exchangeRate["USD" + dropDownValue])
           )

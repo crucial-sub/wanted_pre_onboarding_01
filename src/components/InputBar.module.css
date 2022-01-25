@@ -4,12 +4,8 @@
   justify-content: space-between;
   margin-bottom: 10%;
 }
-
 .inputMoney {
   width: 47%;
-}
-.inputMoney > input {
-  width: 100%;
   text-align: center;
 }
 
