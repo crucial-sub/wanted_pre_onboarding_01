@@ -13,7 +13,7 @@ function App() {
   const activatedTab = useSelector((state) => state.tab.activatedTab);
   const isActivated = useSelector((state) => state.tab.isActivated);
 
-  const apiKey = "e0e5c1c6b9fb3dee1c72593e85deb3b2"; // .env로 관리
+  const apiKey = "8a221f0e3aca3ae326843617f093c585";
 
   const getCurrency = async () => {
     const json = await (
